@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
 import "./DropDown.css";
 
-function DropDown({ data }) {
+function DropDown({ data, attrName }) {
   const [isOpen, setOpen] = useState(false);
   const [items, setItems] = useState(data);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -11,16 +11,19 @@ function DropDown({ data }) {
     setItems(data);
   }, [data]);
 
-  const toggleDropdown = () => setOpen(!isOpen);
+  const toggleDropdownOpen = () => setOpen(true);
+  const toggleDropdownClose = () => setOpen(false);
   const handleItemClick = (id) => {
     selectedItem == id ? setSelectedItem(null) : setSelectedItem(id);
   };
   return (
-    <div className="dropdown">
-      <div className="dropdown-header" onClick={toggleDropdown}>
-        {selectedItem
-          ? items.find((item) => item.id == selectedItem).label
-          : "Select your destination"}
+    <div
+      className="dropdown"
+      onMouseOver={toggleDropdownOpen}
+      onMouseOut={toggleDropdownClose}
+    >
+      <div className="dropdown-header">
+        {attrName}
         <i className={`fa fa-chevron-right icon ${isOpen && "open"}`}></i>
       </div>
       <div className={`dropdown-body ${isOpen && "open"}`}>
@@ -35,7 +38,6 @@ function DropDown({ data }) {
                 item.id == selectedItem && "selected"
               }`}
             >
-              •{" "}
             </span>
             {item.label}
           </div>

@@ -1,4 +1,29 @@
-.topBar{
+body {
+  background-color: grey;
+}
+
+
+.topBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.accountAction {
+  height: 20px;
+}
+
+.pageAction {
+  height: 20px;
+  font-size: 20px;
+}
+
+.siteAction {
+  justify-self: end;
+}
+
+
+#actionGroup {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
