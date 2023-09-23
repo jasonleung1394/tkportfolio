@@ -8,6 +8,7 @@ import './App.css';
 
 // Import Compo
 import DropDown from './components/DropDown';
+import ImgSlider from './components/ImgSlider';
 
 //main page
 
@@ -64,6 +65,8 @@ function App() {
           ]} attrName="Steam" />
         </div>
       </div>
+
+      <ImgSlider />
 
     </>
   );
