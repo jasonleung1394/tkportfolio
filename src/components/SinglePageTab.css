@@ -1,0 +1,14 @@
+.tabsContainer {
+    display: flex;
+    height: 30px;
+    gap: 5px;
+
+}
+.tab button{
+	background: darkgray;
+	padding: 8px;
+	border: 1px solid var(--neutral-dk);
+	border-bottom: none;
+	border-radius: 12px 12px 0 0;
+	cursor: pointer;
+}

@@ -9,6 +9,7 @@ import './App.css';
 // Import Compo
 import DropDown from './components/DropDown';
 import ImgSlider from './components/ImgSlider';
+import SinglePageTab from './components/SinglePageTab';
 
 //main page
 
@@ -67,7 +68,9 @@ function App() {
       </div>
 
       <ImgSlider />
+      
 
+      <SinglePageTab />
     </>
   );
 }

@@ -45,11 +45,10 @@ export default function ImgSlider() {
     return () => {
       resetTimeout();
     };
-  });
+  }, [imgCount]);
 
   return (
     <>
-      <p>Img Slider</p>
       <div className="imgCanvas">
         <div
           className="imgWrapper"
@@ -57,17 +56,41 @@ export default function ImgSlider() {
             background:
               "linear-gradient(90deg, grey 0%,  rgba(128, 128, 128, 0.548) 30%)",
           }}
+          onClick={() => {
+            setImgCount((prevImgCount) =>
+              prevImgCount === sliders.length - 1
+                ? prevImgCount - 1
+                : sliders.length - 1
+            );
+          }}
         >
           <img src={arrowBackward} alt="" />
         </div>
-        <div className="images">
-          <img src={sliders[imgCount].imagePath} alt="" />
+        <div className="imgContainer">
+          <div
+            className="images"
+            style={{ transform: `translate3d(${-imgCount * 100}%, 0, 0)` }}
+          >
+            {sliders.map((slider, i) => (
+              <img
+                key={slider.id}
+                src={slider.imagePath}
+                alt=""
+                className="slide"
+              />
+            ))}
+          </div>
         </div>
         <div
           className="imgWrapper"
           style={{
             background:
               "linear-gradient(270deg, grey 0%,  rgba(128, 128, 128, 0.548) 30%)",
+          }}
+          onClick={() => {
+            setImgCount((prevImgCount) =>
+              prevImgCount === sliders.length - 1 ? 0 : prevImgCount + 1
+            );
           }}
         >
           <img src={arrowForward} alt="" />
