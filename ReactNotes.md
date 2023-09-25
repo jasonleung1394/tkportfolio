@@ -45,14 +45,45 @@ componentDidMount() {
 
 ### React `Child`
 
-
-
-### React `useState`
-
-
-
 ### React `map`
 
 
 
+## React Hook 是什么
+
+为组件引入外部功能，用use当作前缀
+
+
+
+### React `useState`
+
+```javascript
+const  [buttonText, setButtonText] =  useState("Click me,   please");
+```
+
+`buttonText` 就是value， 后面`useState()`赋予了初始值
+
+`setButtonText` 可以在后续的函数中被调用，改变buttonText的值
+
+### React `useContext()`
+
+当前用户管理，可以将当前状态分到别的组件中去，比如导航栏和对话框共享当前用户名
+
+
+
+### React `useReducer()`
+
+
+
 ### React `useEffect`
+
+触发异步的hook
+
+```javascript
+useEffect(()  =>  {
+  // Async Action
+}, [dependencies])
+```
+
+当下面的那个dependencies变量发生改变时，useEffect里面的code会跑
+
