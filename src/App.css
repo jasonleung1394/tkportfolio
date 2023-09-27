@@ -11,13 +11,14 @@ body {
 }
 
 .accountAction {
-  height: 20px;
+  height: 1vh;
   color: var(--secondary-text);
+  font-size: var(--secondary-text-size);
 }
 
 .pageAction {
-  height: 20px;
-  font-size: 20px;
+  height: 1vh;
+  font-size: var(--primary-text-size);
 }
 
 .siteAction {

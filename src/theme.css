@@ -11,4 +11,11 @@
     --secondary-text: rgb(114, 121, 129);
     --highLight-text: rgb(25, 148, 236);
 
+
+    /* text size */
+    --primary-text-size: 1vw;
+    --secondary-text-size: 0.7vw;
+
+
+
 }

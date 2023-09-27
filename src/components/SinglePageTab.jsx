@@ -93,7 +93,8 @@ export default function SinglePageTab() {
                   Card: {
                     colorBgContainer: "rgb(23, 29, 37)",          
                     colorTextDescription: "rgb(210, 213, 214)",
-                    colorTextHeading:"rgb(210, 213, 214)"      
+                    colorTextHeading:"rgb(210, 213, 214)",
+                    fontSize: "0.7vw",
                   },
                 },
               }}
@@ -104,7 +105,7 @@ export default function SinglePageTab() {
                 renderItem={(item, index) => (
                   <List.Item>
                     <Card
-                      style={{ width: 1200, display: "flex" }}
+                      style={{ width: "50vw", display: "flex"}}
                       cover={
                         <img
                           alt="example"

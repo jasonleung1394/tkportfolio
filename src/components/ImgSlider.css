@@ -1,7 +1,7 @@
 .sliderIndicator img {
-    border-radius: 10px;
-    max-width: 15px;
-    margin-left: 5px;
+    border-radius: 0.5vw;
+    max-width: 1vw;
+    margin-left: 0.3vw;
 }
 
 
@@ -9,22 +9,23 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    padding-top: 2vh;
 }
 
 .imgCanvas .imgWrapper {
     display: inline-block;
     margin: auto 0;
-    padding: 20px;
+    padding: 1vw;
     cursor: pointer;
 }
 
 .imgContainer {
     overflow: hidden;
-    width: 1000px;
+    width: 60vw;
 }
 
 .images {
-    box-shadow: 5px 10px 18px #888888;
+    box-shadow: 0.1vw 0.2vw 1vw #888888;
     white-space: nowrap;
     transition: ease 1000ms;
 }
@@ -33,13 +34,13 @@
     display: inline-block;
     transition: transform 1s ease;
     /* Apply a transform transition for sliding */
-    width: 1000px;
-    height: 500px;
+    width: 60vw;
+    height: 50vh;
     object-fit: cover;
 }
 
 .sliderIndicator {
-    padding-top: 10px;
+    padding-top: 2vh;
     display: flex;
     justify-content: center;
 
@@ -53,7 +54,6 @@
     opacity: 1;
 }
 
-img{
+img {
     cursor: pointer;
 }
-
