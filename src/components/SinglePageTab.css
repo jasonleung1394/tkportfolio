@@ -1,14 +1,41 @@
+.canvas {
+	margin: 0 auto;
+	width: 80%;
+}
+
 .tabsContainer {
-    display: flex;
-    height: 30px;
-    gap: 5px;
+	display: flex;
+	height: 30px;
+	gap: 5px;
 
 }
-.tab button{
-	background: darkgray;
+
+.tab button {
+	background: lightgray;
 	padding: 8px;
 	border: 1px solid var(--neutral-dk);
 	border-bottom: none;
 	border-radius: 12px 12px 0 0;
 	cursor: pointer;
+}
+
+.tab button:hover {
+	color: white;
+}
+
+.tab.activeTab button {
+	background: darkgray;
+}
+
+
+.ListContainer {
+	background-color: darkgray;
+}
+
+.tabsContainer,
+.ListContainer {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* Additional styles as needed */
 }
