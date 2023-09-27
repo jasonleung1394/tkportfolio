@@ -1,0 +1,14 @@
+:root {
+    /* background color series */
+    --background-color: rgb(23, 29, 37);
+    --primary-color: rgb(42, 70, 93);
+    --secondary-color: rgb(34, 57, 75);
+
+
+
+    /* text color series */
+    --primary-text: rgb(210, 213, 214);
+    --secondary-text: rgb(114, 121, 129);
+    --highLight-text: rgb(25, 148, 236);
+
+}

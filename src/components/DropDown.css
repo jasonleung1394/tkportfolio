@@ -1,5 +1,5 @@
 body {
-    color: white;
+    color: var(--primary-text);
 }
 
 .dropdown {
@@ -18,19 +18,24 @@ body {
     align-items: center;
 }
 
+.dropdown-header:hover {
+    color: var(--highLight-text);
+    border-bottom: 5px solid var(--highLight-text);
+}
+
 .dropdown-body {
+    position: relative;
     padding: 5px;
     border-top: 1px solid #E5E8EC;
     display: none;
+    background-color: darkgray;
 }
 
 .dropdown-body.open {
     display: block;
 }
 
-.dropdown-item {
-    /* padding: 10px; */
-}
+.dropdown-item {}
 
 .dropdown-item:hover {
     cursor: pointer;

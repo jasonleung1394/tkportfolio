@@ -14,7 +14,7 @@ function DropDown({ data, attrName }) {
   const toggleDropdownOpen = () => setOpen(true);
   const toggleDropdownClose = () => setOpen(false);
   const handleItemClick = (id) => {
-    selectedItem == id ? setSelectedItem(null) : setSelectedItem(id);
+    selectedItem === id ? setSelectedItem(null) : setSelectedItem(id);
   };
   return (
     <div
@@ -35,7 +35,7 @@ function DropDown({ data, attrName }) {
           >
             <span
               className={`dropdown-item-dot ${
-                item.id == selectedItem && "selected"
+                item.id === selectedItem && "selected"
               }`}
             >
             </span>

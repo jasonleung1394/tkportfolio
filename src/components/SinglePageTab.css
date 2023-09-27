@@ -1,22 +1,30 @@
 .canvas {
 	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.tabCanvas {
 	width: 80%;
+	margin: auto;
 }
 
 .tabsContainer {
 	display: flex;
 	height: 30px;
 	gap: 5px;
-
+	margin-bottom: 20px;
 }
 
 .tab button {
-	background: lightgray;
+	background: var(--secondary-color);
 	padding: 8px;
 	border: 1px solid var(--neutral-dk);
 	border-bottom: none;
 	border-radius: 12px 12px 0 0;
 	cursor: pointer;
+	color: var(--primary-text);
+
 }
 
 .tab button:hover {
@@ -24,18 +32,28 @@
 }
 
 .tab.activeTab button {
-	background: darkgray;
+	background-color: var(--primary-color);
 }
 
+.listCanvas {
+	background-color: var(--primary-color);
+
+}
 
 .ListContainer {
-	background-color: darkgray;
+	background-color: var(--primary-color);
+	width: 80%;
+	margin: auto;
 }
 
 .tabsContainer,
 .ListContainer {
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	box-sizing: border-box;
 	/* Additional styles as needed */
+}
+
+.listItem {
+	background-color: var(--secondary-color);
 }

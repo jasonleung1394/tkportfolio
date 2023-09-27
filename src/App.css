@@ -1,5 +1,6 @@
+@import 'theme.css';
 body {
-  background-color: rgb(189, 189, 189);
+  background-color: var(--background-color);
 }
 
 
@@ -11,6 +12,7 @@ body {
 
 .accountAction {
   height: 20px;
+  color: var(--secondary-text);
 }
 
 .pageAction {

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Avatar, List } from "antd";
+import { ConfigProvider, Avatar, List, Card } from "antd";
 // css import
 import "./SinglePageTab.css";
-import Item from "antd/es/list/Item";
+
 const tabList = [
   {
     id: 1,
@@ -68,35 +68,65 @@ export default function SinglePageTab() {
   return (
     <>
       <div className="canvas">
-        <div className="tabsContainer">
-          {tabList.map((tab) => (
-            <div
-              className={`tab ${tabId === tab.id ? "activeTab" : ""}`}
-              key={tab.id}
-              onClick={() => setTabId(tab.id)}
-            >
-              <button>{tab.title}</button>
-            </div>
-          ))}
+        <div className="tabCanvas">
+          <div className="tabsContainer">
+            {tabList.map((tab) => (
+              <div
+                className={`tab ${tabId === tab.id ? "activeTab" : ""}`}
+                key={tab.id}
+                onClick={() => setTabId(tab.id)}
+              >
+                <button>{tab.title}</button>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="ListContainer">
-          <List
-            pagination={{ position: "top", align: "start" }}
-            dataSource={ListData[tabId - 1]}
-            renderItem={(item, index) => (
-              <List.Item>
-                <List.Item.Meta
-                  avatar={
-                    <Avatar
-                      src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`}
-                    />
-                  }
-                  title={<a href="https://ant.design">{item.title}</a>}
-                  description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-                />
-              </List.Item>
-            )}
-          />
+        <div className="listCanvas">
+          <div className="ListContainer">
+            <ConfigProvider
+              theme={{
+                components: {
+                  List: {
+                    colorText: "rgb(210, 213, 214)",
+                    paddingContentVertical: "30",
+                  },
+                  Card: {
+                    colorBgContainer: "rgb(23, 29, 37)",          
+                    colorTextDescription: "rgb(210, 213, 214)",
+                    colorTextHeading:"rgb(210, 213, 214)"      
+                  },
+                },
+              }}
+            >
+              <List
+                pagination={{ position: "top", align: "start" }}
+                dataSource={ListData[tabId - 1]}
+                renderItem={(item, index) => (
+                  <List.Item>
+                    <Card
+                      style={{ width: 1200, display: "flex" }}
+                      cover={
+                        <img
+                          alt="example"
+                          src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                        />
+                      }
+                      actions={[]}
+                      hoverable = {true}
+                    >
+                      <Card.Meta
+                        avatar={
+                          <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel" />
+                        }
+                        title={item.title}
+                        description="This is the description"
+                      />
+                    </Card>
+                  </List.Item>
+                )}
+              />
+            </ConfigProvider>
+          </div>
         </div>
       </div>
     </>
